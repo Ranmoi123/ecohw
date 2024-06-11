@@ -193,9 +193,8 @@
       </div>
     </div>
   </nav>
-
   <div class="banner" id="top">
-    <div class="content">
+    <div class="content container">
       <div class="banner-txt">
         <h1>當個減塑小子<small>From 雲科大視傳系學生</small></h1>
         <h2>觀察夜市與環保的改善方法</h2>
@@ -472,59 +471,7 @@
       </div>
     </div>
 
-    <script>
-      const registrationForm = document.getElementById('registrationForm');
-      const registrationList = document.getElementById('registrationList');
-
-      // 監聽表單提交事件
-      registrationForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const formData = new FormData(registrationForm);
-        const name = formData.get('name');
-        const contact = formData.get('contact');
-
-        // 向後端發送 POST 請求
-        fetch('/register', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ name, contact })
-        })
-          .then(response => response.text())
-          .then(message => {
-            console.log(message);
-            // 更新登記名單
-            updateRegistrationList();
-          })
-          .catch(error => console.error('Error:', error));
-      });
-
-      // 更新登記名單
-      function updateRegistrationList() {
-        fetch('/registrations')
-          .then(response => response.json())
-          .then(data => {
-            // 清空登記名單
-            registrationList.innerHTML = '';
-            // 添加最新的五個登記記錄
-            data.forEach((registration, index) => {
-              if (index < 5) {
-                const listItem = document.createElement('li');
-                listItem.classList.add('list-group-item');
-                listItem.textContent = `${registration.name} - ${registration.contact}`;
-                registrationList.appendChild(listItem);
-              }
-            });
-          })
-          .catch(error => console.error('Error:', error));
-      }
-
-      // 頁面加載時更新登記名單
-      window.addEventListener('load', () => {
-        updateRegistrationList();
-      });
-    </script>
+    
 
 
 

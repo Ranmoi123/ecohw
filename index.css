@@ -9,45 +9,59 @@
 .banner {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(115deg, rgba(0, 0, 0, 0.6) 50%, transparent 50%) center center / 100% 100%, url(img/b1.jpg);
+  background: linear-gradient(115deg, rgba(0, 0, 0, 0.6) 50%, transparent 50%) center center / 100% 100%, url('img/b1.jpg');
   background-size: cover;
   background-position: 25% 25%;
-
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
 }
 
 .content {
-  height: 100%;
   width: 100%;
-  margin: auto;
+  display: flex;
+  justify-content: flex-start; /* 向左对齐 */
 }
 
 .banner-txt {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  transform: translateX(-25%); /* 向左移动 */
+  color: rgba(240, 248, 255, 0.8);
+  text-align: left;
 }
 
 .banner-txt h1 {
-  font-size: 85px;
+  font-size: 5vw;
   border-bottom: 1px solid;
   font-weight: bolder;
-  color: rgba(240, 248, 255, 0.8)
 }
 
 .banner-txt h1 small {
   display: block;
-  font-size: 40px;
-  color: rgba(240, 248, 255, 0.8);
+  font-size: 2.5vw;
 }
 
 .banner-txt h2 {
+  font-size: 2.5vw;
   font-weight: 800;
-  color: rgba(240, 248, 255, 0.8)
 }
 
-.banner-txt p {}
+@media (max-width: 768px) {
+  .banner-txt h1 {
+    font-size: 10vw;
+  }
+
+  .banner-txt h1 small {
+    font-size: 5vw;
+  }
+
+  .banner-txt h2 {
+    font-size: 5vw;
+  }
+}
+
+
+
+
 
 /*about*/
 
