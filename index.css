@@ -230,6 +230,7 @@
 .wrapinp .item img {
   width: 100%;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .wrapinp .item:first-child {
@@ -240,25 +241,7 @@
   width: 25%;
 }
 
-.wrapinp .txt {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  text-align: center;
-  align-items: center;
-  color: aliceblue;
-  box-sizing: border-box;
-  background-color: rgba(0, 0, 0, .5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  opacity: 0;
-  transition: .6s;
-}
-
+.wrapinp .txt,
 .wrapinp .txt2 {
   position: absolute;
   top: 0;
@@ -270,23 +253,25 @@
   align-items: center;
   color: aliceblue;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, .6);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0;
   transition: .6s;
 }
 
-
-.wrapinp .item:hover .txt {
+.wrapinp .item:hover .txt,
+.wrapinp .item:hover .txt2 {
   opacity: 1;
 }
 
-.wrapinp .txt h3 {
+.wrapinp .txt h3,
+.wrapinp .txt2 h3 {
   margin-bottom: .4em;
 }
 
-.wrapinp .txt p {
+.wrapinp .txt p,
+.wrapinp .txt2 p {
   font-weight: 100;
   line-height: 1.7;
 }
@@ -312,6 +297,7 @@
 .wrapinp2 .item img {
   width: 100%;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .wrapinp2 .item:first-child {
@@ -322,25 +308,7 @@
   width: 25%;
 }
 
-.wrapinp2 .txt {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  text-align: center;
-  align-items: center;
-  color: aliceblue;
-  box-sizing: border-box;
-  background-color: rgba(0, 0, 0, .5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  opacity: 0;
-  transition: .6s;
-}
-
+.wrapinp2 .txt,
 .wrapinp2 .txt2 {
   position: absolute;
   top: 0;
@@ -352,22 +320,25 @@
   align-items: center;
   color: aliceblue;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, .6);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0;
   transition: .6s;
 }
 
-.wrapinp2 .item:hover .txt {
+.wrapinp2 .item:hover .txt,
+.wrapinp2 .item:hover .txt2 {
   opacity: 1;
 }
 
-.wrapinp2 .txt h3 {
+.wrapinp2 .txt h3,
+.wrapinp2 .txt2 h3 {
   margin-bottom: .4em;
 }
 
-.wrapinp2 .txt p {
+.wrapinp2 .txt p,
+.wrapinp2 .txt2 p {
   font-weight: 100;
   line-height: 1.7;
 }
